@@ -19,23 +19,26 @@ namespace SportsMaze
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if ((targetLayer.value & (1 << collision.gameObject.layer)) != 0)
+            if(GameplayManager.Instance.currentState == GameplayManager.GameState.PLAYING)
             {
-                GameplayManager.Instance.ChangeGameState(GameplayManager.GameState.WIN);
-                TweenToTarget(collision.transform);
-            }
+                if ((targetLayer.value & (1 << collision.gameObject.layer)) != 0)
+                {
+                    GameplayManager.Instance.ChangeGameState(GameplayManager.GameState.WIN);
+                    TweenToTarget(collision.transform);
+                }
 
-            if ((obstacleLayer.value & (1 << collision.gameObject.layer)) != 0)
-            {
-                SoundManager.Instance.PlaySound(SoundType.Destroyed, false);
+                if ((obstacleLayer.value & (1 << collision.gameObject.layer)) != 0)
+                {
+                    SoundManager.Instance.PlaySound(SoundType.Destroyed, false);
 
-                // PS
-                var destroyPS = Instantiate(destroyPs, transform.position, Quaternion.identity);
-                Destroy(destroyPS.gameObject, 1f);
+                    // PS
+                    var destroyPS = Instantiate(destroyPs, transform.position, Quaternion.identity);
+                    Destroy(destroyPS.gameObject, 1f);
 
-                SetVisible(false);
-                GameplayManager.Instance.ChangeGameState(GameplayManager.GameState.GAMEOVER);
-            }
+                    SetVisible(false);
+                    GameplayManager.Instance.ChangeGameState(GameplayManager.GameState.GAMEOVER);
+                }
+            }        
         }
 
         public float tweenTime = 1.0f;   // Time for the tween to complete (in seconds)

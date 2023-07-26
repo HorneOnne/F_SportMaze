@@ -44,12 +44,12 @@ namespace SportsMaze
 
         public void NextLevel()
         {
-            currentLevel++;
-            if (currentLevel > levelData.Count)
-                currentLevel = levelData.Count;
+            //currentLevel++;
+            //if (currentLevel > levelData.Count)
+            //    currentLevel = levelData.Count;
 
-            Unlock(currentLevel);
-            playingLevelData = levelData[currentLevel - 1];
+            //Unlock(currentLevel);
+            //playingLevelData = levelData[currentLevel - 1];
         }
 
 
