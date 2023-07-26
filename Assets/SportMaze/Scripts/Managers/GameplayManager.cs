@@ -36,6 +36,7 @@ namespace SportsMaze
         private void Awake()
         {
             Instance = this;
+            Time.timeScale = 1.0f;
         }
 
         private void OnEnable()
