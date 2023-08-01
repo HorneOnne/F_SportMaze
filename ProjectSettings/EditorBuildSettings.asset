@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/SportMaze/Scenes/MainmenuScene.unity
     guid: cd7c7e50247f3924ab302ede1212eba1
   - enabled: 1
-    path: Assets/SportMaze/Scenes/Level_01.unity
-    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+    path: Assets/SportMaze/Scenes/GameplayScene.unity
+    guid: 661dc7231ae509d4b9e912817c17408f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2f0412fc807344148ad4a45114e92ea2, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: a47a0460145f83d4e916484dd922be5e, type: 2}

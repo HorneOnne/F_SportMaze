@@ -89,6 +89,7 @@ namespace SportsMaze
                     }));
 
                     GameManager.Instance.SetStar(Star);
+                    GameManager.Instance.NextLevel();
                     OnWin?.Invoke();
                     break;
                 case GameState.GAMEOVER:

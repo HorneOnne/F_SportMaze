@@ -6,6 +6,7 @@ namespace SportsMaze
     public class RotateObjectWithPhysics : MonoBehaviour
     {
         public float linearSpeed = 2f; // Adjust the linear movement speed.
+        public float smoothlyStopTime = 1.0f;
         private Rigidbody2D rb;
         private InputHandler inputHandler;
         [SerializeField] private float maxAngularVelocity = 300f;
@@ -37,7 +38,7 @@ namespace SportsMaze
         {
             currentTorque = rb.angularVelocity;
             if (!isStopping)
-                StartCoroutine(SmoothStopTorque(1.0f));
+                StartCoroutine(SmoothStopTorque(smoothlyStopTime));
         }
 
         private IEnumerator SmoothStopTorque(float stopTime)
@@ -63,10 +64,10 @@ namespace SportsMaze
      
         private void FixedUpdate()
         {
-            if (inputHandler.isDragging)
+            if (inputHandler.IsPressing)
             {
                 rb.freezeRotation = false;
-                if(inputHandler.isClockwise)
+                if(inputHandler.IsClockwise)
                     rb.AddTorque(linearSpeed, ForceMode2D.Force);      
                 else
                     rb.AddTorque(-linearSpeed, ForceMode2D.Force);

@@ -9,5 +9,8 @@ namespace SportsMaze
         public int level;
         public int star;
         public bool isLocking;
+
+        public GameObject mapPrefab;
+        public Vector2 ballPosition;
     }
 }

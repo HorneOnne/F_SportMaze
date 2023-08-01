@@ -28,7 +28,7 @@ namespace SportsMaze
                 if (levelData.isLocking) return;
                 GameManager.Instance.playingLevelData = levelData;
                 GameManager.Instance.currentLevel = levelData.level;
-                Loader.LoadLevel(levelData.level);
+                Loader.Load(Loader.Scene.GameplayScene);
                 SoundManager.Instance.PlaySound(SoundType.Button, false);
             });
         }

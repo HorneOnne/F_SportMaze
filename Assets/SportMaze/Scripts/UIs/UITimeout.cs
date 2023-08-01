@@ -15,7 +15,7 @@ namespace SportsMaze
         {
             restartBtn.onClick.AddListener(() =>
             {
-                Loader.LoadLevel(GameManager.Instance.playingLevelData.level);
+                Loader.Load(Loader.Scene.GameplayScene);
                 SoundManager.Instance.PlaySound(SoundType.Button, false);
             });
 

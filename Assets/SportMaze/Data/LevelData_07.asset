@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: LevelData_07
   m_EditorClassIdentifier: 
   level: 7
+  star: 0
   isLocking: 1
+  mapPrefab: {fileID: 8264027049924616759, guid: 94150ba611ba9cb4abbf927c5ccd1a90, type: 3}
+  ballPosition: {x: 0, y: -1.21}

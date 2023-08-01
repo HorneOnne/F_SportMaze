@@ -44,7 +44,9 @@ namespace SportsMaze
         {
 
             SoundManager.Instance.MuteSoundFX(SoundManager.Instance.isSoundFXActive);
+            SoundManager.Instance.MuteBackground(SoundManager.Instance.isSoundFXActive);
             SoundManager.Instance.isSoundFXActive = !SoundManager.Instance.isSoundFXActive;
+            
 
             UpdateSoundFXUI();
         }
