@@ -76,14 +76,7 @@ namespace SportsMaze
 
                 if (rb.angularVelocity < -maxAngularVelocity)
                     rb.angularVelocity = -maxAngularVelocity;
-            }
-               
-
-            
+            }                       
         }
-
- 
-
-
     }
 }

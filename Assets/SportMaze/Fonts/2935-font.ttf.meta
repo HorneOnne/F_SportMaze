@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8445dc6b773388749b67f1d1c31a79f5
+guid: d66adbdb860494e4fb7f2b7c8982d35a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kino MT
+  - Kino
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
